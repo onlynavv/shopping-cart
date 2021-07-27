@@ -1,2 +1,2 @@
 # shopping-cart
- creating shopping cart using reactjs context api
+ creating shopping cart using redux
