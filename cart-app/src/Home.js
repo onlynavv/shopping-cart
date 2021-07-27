@@ -1,9 +1,10 @@
 import React from 'react'
-import products from './data'
+// import products from './data'
 import ProductCard from './ProductCard'
 import './index.css'
+import { connect } from 'react-redux'
 
-const Home = () => {
+const Home = ({products}) => {
     return (
         <div className='products-wrapper'>
             {products.map((product)=>{
@@ -15,4 +16,10 @@ const Home = () => {
     )
 }
 
-export default Home
+const mapStateToProps = (state) => {
+    return{
+        products : state.shoppingReducer.products
+    }
+}
+
+export default connect(mapStateToProps)(Home)
